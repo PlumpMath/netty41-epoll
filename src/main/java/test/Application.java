@@ -206,7 +206,7 @@ public class Application {
 
         public void connect() throws InterruptedException {
             // Start the client.
-            ChannelFuture f = bootstrap.connect(socketAddress).await();
+            ChannelFuture f = bootstrap.bind(0).await();
             channel = f.channel();
         }
 
